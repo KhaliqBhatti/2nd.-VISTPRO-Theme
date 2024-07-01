@@ -1,0 +1,720 @@
+@import url('https://fonts.googleapis.com/css2?family=Jost:ital,wght@0,200;0,300;0,400;0,500;0,600;0,700;1,200;1,300;1,400;1,500;1,600&family=Poppins:ital,wght@0,100;0,200;0,300;0,500;0,700;0,800;0,900;1,100;1,300;1,400;1,500;1,600;1,700;1,800;1,900&family=Roboto:wght@300&family=Rubik:ital,wght@0,300;0,400;0,500;0,600;0,700;1,300;1,400;1,500;1,600&display=swap');
+
+* {
+    margin: 0px;
+    padding: 0px;
+    font-family: 'Poppins', sans-serif;
+}
+
+.mainul>li {
+    height: 100%;
+    color: grey;
+    font-size: 18px;
+    padding: 30px 20px;
+    transition-duration: 1s;
+}
+
+.mainul>li:hover {
+    cursor: pointer;
+    color: black;
+}
+
+.circle {
+    transition-duration: 1s;
+}
+
+.mainul>li:hover .circle {
+    margin-top: 28px;
+
+}
+
+.fa-magnifying-glass {
+    transition-duration: 1s;
+}
+
+.fa-magnifying-glass:hover {
+    cursor: pointer;
+    color: #FF5857;
+}
+
+.sec1c {
+    background-image: linear-gradient(to right, rgba(25, 25, 25, 0.918), rgba(26, 26, 26, 0.89)), url(./banner-1.jpg);
+    background-size: 100% 100%;
+}
+
+.sec1 {
+    animation-name: bg-scale;
+    animation-duration: 10s;
+    animation-iteration-count: infinite;
+    /* border: 1px solid red; */
+}
+
+@keyframes bg-scale {
+    0% {
+        transform: scale(1);
+    }
+    30% {
+        background-image: linear-gradient(to right, rgba(0, 0, 0, 0.918), rgba(0, 0, 0, 0.774)), url(./banner-2.jpg);
+        background-size: 100% 100%;
+        animation-delay: 3s;
+    }
+    60% {
+        background-image: linear-gradient(to right, rgba(0, 0, 0, 0.918), rgba(0, 0, 0, 0.774)), url(./banner-3.jpg);
+        background-size: 100% 100%;
+        animation-delay: 5s;
+    }
+    100% {
+        transform: scale(1.2);
+    }
+}
+
+.heading {
+    z-index: 2;
+    border: 1px solid white;
+    overflow: hidden;
+}
+
+.para {
+    margin-top: -230px;
+    animation-name: para-move;
+    animation-duration: 7s;
+    animation-iteration-count: infinite;
+}
+
+@keyframes para-move {
+    0% {
+        opacity: 0;
+        margin-top: -500px;
+    }
+
+    25% {
+        opacity: 0.2;
+    }
+
+    50% {
+        opacity: 1;
+        margin-top: -200px;
+    }
+
+    75% {
+        margin-top: -200px;
+    }
+
+    100% {
+        margin-top: -700px;
+    }
+
+}
+
+.h1 {
+    position: absolute;
+    animation-name: h1-move;
+    animation-duration: 9s;
+    animation-iteration-count: infinite;
+}
+
+@keyframes h1-move {
+    0% {
+        opacity: 0;
+        margin-right: -155%;
+    }
+
+    25% {
+        opacity: 0.2;
+
+    }
+
+    50% {
+        opacity: 0.8;
+        margin-right: 1px;
+    }
+
+    75% {
+        opacity: 1;
+        
+    }
+
+    100% {
+        margin-right: -155%;
+    }
+
+}
+
+.h1:hover {
+    animation-play-state: paused;
+}
+
+.discoverbtn {
+    top: 75%;
+    left: 40%;
+    border-radius: 15px;
+    z-index: 1;
+    overflow: hidden;
+    animation-name: btn-move;
+    animation-iteration-count: infinite;
+    animation-duration: 7s;
+}
+
+@keyframes btn-move {
+    0% {
+        top: 100%;
+    }
+
+    50% {
+        top: 75%;
+    }
+
+    70% {
+        top: 75%;
+    }
+
+    100% {
+        top: 100%;
+    }
+}
+
+.discoverbtn::after {
+    content: "";
+    width: 50%;
+    height: 100%;
+    position: absolute;
+    top: 0px;
+    left: 100%;
+    background-color: rgb(0, 0, 0);
+    transition-duration: 1s;
+    z-index: -1;
+}
+
+.discoverbtn:hover::after {
+    cursor: pointer;
+    transition-duration: 1s;
+    left: 50%;
+}
+
+.discoverbtn::before {
+    content: "";
+    width: 0%;
+    height: 100%;
+    position: absolute;
+    top: 0px;
+    left: 0%;
+    background-color: rgb(0, 0, 0);
+    transition-duration: 1s;
+    z-index: -1;
+}
+
+.discoverbtn:hover::before {
+    cursor: pointer;
+    transition-duration: 1s;
+    width: 50%;
+}
+
+/* <!--------- Sec2 Start --------> */
+
+.sec2 {
+    /* border: 1px solid red; */
+}
+
+.cards {
+    /* border: 1px solid red; */
+}
+
+.card1 {
+    border: 2px solid rgba(128, 128, 128, 0.637);
+    box-shadow: 0.1px 0.1px 10px 0.1px rgba(0, 0, 0, 0.37);
+    border-radius: 8px;
+    z-index: 1;
+}
+
+.card1::before {
+    position: absolute;
+    content: '';
+    width: 0%;
+    height: 0%;
+    top: 0px;
+    border-radius: 8px;
+    transition-duration: 0.5s;
+    border: 2px solid #FF5958;
+    background: transparent;
+    z-index: -1;
+}
+
+.card1:hover::before {
+    width: 100%;
+    height: 100%;
+}
+
+.halfcircle {
+    border-radius: 50%;
+    top: -40%;
+    left: -30%;
+    background-color: #d3d3d3;
+}
+
+.fa-face-flushed {
+    left: 55%;
+    top: 50%;
+    z-index: 1;
+}
+
+.halfcircle::after {
+    position: absolute;
+    content: '';
+    width: 44%;
+    height: 50%;
+    background-color: #FF5857;
+    top: 0px;
+    border-radius: 50%;
+    transition-duration: 0.5s;
+}
+
+.card1:hover .halfcircle::after {
+    width: 100%;
+    height: 100%;
+    cursor: pointer;
+}
+
+.infoh1:hover {
+    cursor: pointer;
+    color: #FF5857;
+    transition-duration: 0.5s;
+}
+
+.infopara {
+    color: grey;
+    font-size: 17px;
+}
+
+.infopara2 {
+    font-size: 18px;
+    transition-duration: 0.5s;
+}
+
+.infopara2:hover {
+    cursor: pointer;
+    color: #FF5857;
+}
+
+.immigration {
+    /* border: 1px solid red; */
+}
+
+.dotimg {
+    /* border: 1px solid red; */
+    background-image: url(./shape-1.png);
+    background-size: 100% 100%;
+}
+
+.leftside {
+    /* border: 1px solid green; */
+}
+
+.knowus {
+    color: #FF5857;
+    font-size: 16px;
+}
+
+.knowuspara {
+    font-size: 20px;
+}
+
+.ratingdiv {
+    /* border: 1px solid red; */
+}
+
+.fa-check {
+    color: #FF5857;
+}
+
+.checkpara {
+    font-size: 18px;
+    margin-top: 20px;
+}
+
+.rightside {
+    /* border: 1px solid red; */
+}
+
+.scaleimg {
+    /* border: 1px solid red; */
+}
+
+.scaleimg>img {
+    transition-duration: 1s;
+}
+
+.rightside:hover .scaleimg img {
+    transform: scale(1.1);
+    transition-duration: 1s;
+}
+
+.line {
+    animation-name: line-move;
+    animation-duration: 5s;
+    animation-iteration-count: infinite;
+}
+
+@keyframes line-move {
+    0% {
+        height: 10px;
+    }
+    50% {
+        height: 150px;
+    }
+    100% {
+        height: 10px;
+    }
+}
+
+.comment {
+    background-color: rgba(237, 237, 237, 0.884);
+    clip-path: polygon(0% 0%, 100% 0%, 100% 51%, 87% 40%, 0 39%);
+    border-radius: 8px;
+    box-shadow: 1px 1px 2px rgba(72, 72, 72, 0.678) 1px;
+}
+
+.girlimg {
+    /* border: 1px solid red; */
+    border-radius: 10px;
+}
+
+.sec3 {
+    /* border: 1px solid red; */
+}
+
+.teamcards {
+    /* border: 1px solid red; */
+}
+
+.teamcard1 {
+    border: 1px solid grey;
+    border-radius: 10px;
+}
+
+.flipdiv {
+    background-color: rgba(0, 0, 0, 0.733);
+    transition-duration: 1s;
+    visibility: hidden;
+}
+
+.teamcard1:hover .flipdiv {
+    transform: rotatex(180deg);
+    visibility: visible;
+    height: 48%;
+}
+
+.bottomcircle {
+    right: -10%;
+    bottom: -6%;
+    border-radius: 50%;
+}
+
+.bottomcircle::after {
+    position: absolute;
+    content: '';
+    right: 0px;
+    left: 100%;
+    width: 0px;
+    height: 0px;
+    bottom: 0px;
+    transition-duration: 0.5s;
+    background-color: #FF5857;
+    border-radius: 50%;
+}
+
+.teamcard1:hover .bottomcircle::after {
+    width: 100%;
+    height: 100%;
+    left: 0px;
+}
+
+.solutiondiv {
+    /* border: 1px solid red; */
+}
+
+.solution {
+    border-bottom: 3px solid #FF5857;
+    color: #FF5857;
+    transition-duration: 0.5s;
+}
+
+.solution:hover {
+    color: rgb(41, 41, 255);
+    cursor: pointer;
+}
+
+/* <!--------- Sec4 Start --------> */
+.sec4 {
+    /* border: 1px solid red; */
+    background-color: #1B182F;
+}
+
+.leftheading {
+    /* border: 1px solid red; */
+}
+
+.rightcard {
+    /* border: 1px solid red; */
+}
+
+.smallcard1 {
+    /* border: 1px solid red; */
+    background-image: linear-gradient(rgba(0, 0, 0, 0), rgba(0, 0, 0, 0.664)), url(./place-1.jpg);
+}
+
+.flagdiv {
+    border: 2px solid white;
+    border-radius: 50%;
+}
+
+.smallcard2 {
+    background-image: linear-gradient(rgba(0, 0, 0, 0), rgba(0, 0, 0, 0.664)), url(./place-3.jpg);
+}
+
+.smallcard3 {
+    background-image: linear-gradient(rgba(0, 0, 0, 0), rgba(0, 0, 0, 0.664)), url(./place-2.jpg);
+}
+
+/* <!--------- Sec5 Start --------> */
+
+.sec5 {
+    background-image: linear-gradient(to right top, rgb(149, 156, 169), rgba(135, 135, 150, 0.346)), url(./shape-1.png);
+}
+
+.helpcards {
+    /* border: 1px solid red; */
+}
+
+.helpcard1 {
+    /* border: 1px solid red; */
+}
+
+.imgdiv {
+    /* border: 1px solid red; */
+}
+
+/* <!--------- Sec6 Start --------> */
+.trainingcards {
+    /* border: 1px solid red; */
+}
+
+.trainingcardimg {
+    /* border: 1px solid red; */
+    background-image: linear-gradient(to top, rgba(20, 19, 19, 0.661), rgba(0, 0, 0, 0)), url(./coaching-1.jpg);
+    transition-duration: 0.5s;
+}
+
+.trainingcardimg2 {
+    background-image: linear-gradient(to top, rgba(20, 19, 19, 0.661), rgba(0, 0, 0, 0)), url(./coaching-2.jpg);
+}
+
+.trainingcardimg3 {
+    background-image: linear-gradient(to top, rgba(20, 19, 19, 0.661), rgba(0, 0, 0, 0)), url(./coaching-3.jpg);
+}
+
+.trainingcardimg4 {
+    background-image: linear-gradient(to top, rgba(20, 19, 19, 0.661), rgba(0, 0, 0, 0)), url(./coaching-4.jpg);
+}
+
+.trainingcardimg:hover {
+    transform: scale(1.1);
+}
+
+.trainingh1 {
+    border-top: 3px solid #FF5857;
+    transition-duration: 0.8s;
+}
+
+.textdiv {
+    /* border: 1px solid white; */
+}
+
+.trainingcard1:hover .trainingh1 {
+    margin-top: 90px;
+}
+
+.trainingcard1:hover .textdiv {
+    visibility: visible;
+    margin-top: 130px;
+    transition-delay: 0.5s;
+    transition-duration: 1s;
+}
+
+/* <!--------- Sec7 Start --------> */
+.sec7 {
+    border: 1px solid red;
+}
+
+.consultationdiv {
+    border: 1px solid red;
+    background-image: linear-gradient(rgba(255, 0, 0, 0.627), rgba(255, 0, 0, 0.582)), url(./shape-1.png);
+
+}
+
+.appointmentbtn {
+    color: black;
+    z-index: 1;
+    overflow: hidden;
+}
+
+.appointmentbtn:hover {
+    color: white;
+    z-index: 1;
+    transition-duration: 0.2s;
+}
+
+.appointmentbtn::after {
+    content: "";
+    width: 50%;
+    height: 100%;
+    position: absolute;
+    top: 0px;
+    left: 100%;
+    background-color: rgb(0, 0, 0);
+    transition-duration: 1s;
+    z-index: -1;
+}
+
+.appointmentbtn:hover::after {
+    cursor: pointer;
+    transition-duration: 1s;
+    left: 50%;
+}
+
+.appointmentbtn::before {
+    content: "";
+    width: 0%;
+    height: 100%;
+    position: absolute;
+    top: 0px;
+    left: 0%;
+    background-color: rgb(0, 0, 0);
+    transition-duration: 1s;
+    z-index: -1;
+}
+
+.appointmentbtn:hover::before {
+    cursor: pointer;
+    transition-duration: 1s;
+    width: 50%;
+}
+
+.ctaimg {
+    position: absolute;
+}
+
+.blogposts {
+    /* border: 1px solid red; */
+    background-color: #eeeeee;
+}
+
+.postcard {
+    border: none;
+    background-color: #eeeeee;
+}
+
+.postcard:hover {
+    transition-duration: 0.5s;
+    background-color: rgba(255, 255, 255, 0.798);
+}
+
+.postpara1 {
+    transition-duration: 0.3s;
+}
+
+.postpara2 {
+    transition-delay: 0.3s;
+}
+
+.postpara2:hover {
+    color: rgba(28, 28, 255, 0.805);
+}
+
+.postcard:hover .infopara {
+    visibility: hidden;
+    transition-duration: 0.5s;
+
+}
+
+.postcard:hover .postpara2 {
+    visibility: visible;
+    transition-duration: 0.5s;
+    transition-delay: 0.5s;
+
+}
+
+.teamcard1:hover .postflip {
+    transform: rotatex(180deg);
+    visibility: visible;
+    height: 60%;
+
+}
+
+/* <!--------- Sec8 Start --------> */
+.sec8 {
+    border-top: 1px solid grey;
+    background-color: #eeeeee;
+}
+
+.logoimg {
+    opacity: 0.2;
+    transition-duration: 0.5s;
+}
+
+.logoimg:hover {
+    opacity: 1;
+    cursor: pointer;
+}
+
+/* <!--------- Sec9 Start --------> */
+.contactdiv {
+    border-bottom: 1px solid grey;
+}
+
+.fa-envelope-open-text {
+    color: #ff5050;
+}
+
+.fa-phone-volume {
+    color: #ff5050;
+}
+
+.infobottom {
+    /* border: 1px solid red; */
+}
+
+.abouticon>i {
+    margin-top: 60px;
+    margin-left: 30px;
+    font-size: 20px;
+    color: white;
+    border-radius: 50%;
+    background-color: #4D4B6D;
+    transition-duration: 0.5s;
+}
+
+.abouticon>i:hover {
+    background-color: #ff5050;
+    cursor: pointer;
+}
+
+.list>li {
+    list-style: none;
+    color: #63617b;
+    font-size: 18px;
+    margin-top: 20px;
+}
+
+.rightbottom {
+    background-image: url(./shape-5.png);
+    background-size: 100% 100%;
+}
+
+input {
+    background: transparent;
+    color: #63617b;
+}
+
+::placeholder {
+    color: #4D4B6D;
+}
